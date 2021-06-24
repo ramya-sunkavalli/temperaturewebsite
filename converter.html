@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="converter.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Topics</button>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="tempdef.html">Temperature</a>
+                <a href="heatandtemp.html">Heat and Temperature</a>
+                <a href="thermometer.html">Thermometer</a>
+                <a href="thermometerreading.html">Thermometer reading</a>
+                <a href="types.html">Thermometer types</a>
+                <a href="scales.html">Scales</a>            
+              </div>
+            </div>
+            <div class="dropdown2">
+                <button class="dropbtn2">Activities
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content2">
+                  <a href="converter.html">Activity 1</a>
+                  <a href="diagram.html">Activity 2</a>       
+                </div>
+            </div>
+            <a href="tempquiz.html">Quiz</a>
+        </div>
+        <img src="balaswechalogo.png" id="logo">
+        <div>
+          <h1 style="position:absolute;left:12%;top:95px"><u>Activity 1:</u></h1>
+            <h1 id="con">SIMPLE TEMPERATURE CONVERTER</h1>
+            
+        <p id="p1">Select the input temperature scale in first box and the required output temperature scale in second box and enter the temperature you want to convert in the bottom box.
+       </p>
+       <label id="labinp1" value="labinp1" style="color:blue">Temperature in:</label>
+       <select id="in1" style="position:absolute;left:335px;top:350px">
+         <option></option>
+         <option value="cel">Celsius</option>
+         <option value="fah">Fahrenheit</option>
+       </select> 
+       <label id="labinp2" value="labinp2" style="position:absolute;left:590px;color:blue">Convert To:</label>
+       <select id="in2" style="position:absolute;left:780px;top:350px">
+        <option></option>
+        <option value="cel">Celsius</option>
+        <option value="fah">Fahrenheit</option>
+      </select> 
+       <label id="labinp3" value="labinp3" style="position:absolute;left:280px;top:450px;color:black">Enter Temperature:</label>
+       <input type="text" id="in3" style="position:absolute;left:500px;top:450px">
+       <button id="convert" value="convert" style="position:absolute;left:780px;top:450px;background-color:pink;" onclick="myfunction2()">Convert</button>
+       <p id="result" style="position:absolute;left:250px;top:550"></p>
+    </div>
+    <button name="next" id="next" value="next" onclick="myfunction()"><b>NEXT</b></button>
+    <button name="previous" id="previous" value="previous" onclick="myfunction1()"><b>PREVIOUS</b></button>
+    <script>
+      function myfunction1()
+      {
+        window.location.href="scales.html";
+      }
+    
+  function myfunction()
+  {
+    window.location.href="diagram.html";
+  }
+
+        function myfunction2(){
+          var val;
+        var varx=document.getElementById('in1');
+        var vary=document.getElementById('in2');
+        var var1=varx.options[varx.selectedIndex].text;
+        var var2=vary.options[vary.selectedIndex].text;
+        var var3=parseFloat(document.getElementById('in3').value);
+        var res=document.getElementById("result");
+        if(var1=="Celsius" && var2=="Fahrenheit")
+        {
+           if(var3>=0 && var3<=100) 
+           {
+               val=((9/5)*var3)+32;
+            res.innerHTML="Result is: "+val+"°F";
+           }
+           else{
+               res.innerHTML="Temperature is out of range of Celsius scale!! Please enter correct value.";
+           }
+        }
+        else if(var2=="Celsius" && var1=="Fahrenheit")
+       
+    {
+        if(var3>=32 && var3<=212) 
+        {
+            val=(var3-32)*(5/9);
+            res.innerHTML="Result is:  "+val+"°C";
+        }
+        else{
+            res.innerHTML="Temperature is out of range of fahrenheit scale!! Please enter correct value.";
+        }
+    }
+    
+}
+
+    </script>
+        
+    </body>
+</html>

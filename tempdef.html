@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="tempdefstyle.css">
+
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Topics</button>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="tempdef.html">Temperature</a>
+                <a href="heatandtemp.html">Heat and Temperature</a>
+                <a href="thermometer.html">Thermometer</a>
+                <a href="thermometerreading.html">Thermometer reading</a>
+                <a href="types.html">Thermometer types</a>
+                <a href="scales.html">Scales</a>            
+              </div>
+            </div>
+            <div class="dropdown2">
+              <button class="dropbtn2">Activities
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content2">
+                <a href="converter.html">Activity 1</a>
+                <a href="diagram.html">Activity 2</a>        
+            </div>
+            </div>
+            <a href="tempquiz.html">Quiz</a>
+          </div>
+        
+        <img src="balaswechalogo.png" id="logo">
+        <h1>TEMPERATURE DEFINITION</h1>
+        <p id="p1">
+            Temperature is a measure of degree of hotness of a body.The SI unit of temperature is kelvin(k).But temperature is also measured in celcius or fahrenheit scales.The instrument used to measure temperature is called a thermometer.
+            Temperature is the  measure of average heat of molecules in a substance.</p>
+            <img src="tempdef.jpg" id="tempdefimg">
+            <p id="p2">For better understanding watch this video.</p>
+            <iframe width="590" height="345" src="https://www.youtube.com/embed/uLtWRK_Pd5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <button name="next" id="next" value="next" onclick="myfunction()"><b>NEXT</b></button>
+              <button name="previous" id="previous" value="previous" onclick="myfunction1()"><b>PREVIOUS</b></button>
+<script>
+  function myfunction1()
+  {
+    window.location.href="index.html";
+  }
+
+                function myfunction()
+                {
+                  window.location.href="heatandtemp.html";
+                }
+              </script>
+            </body>
+</html>

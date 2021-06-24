@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="reading.css">
+
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Topics</button>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="tempdef.html">Temperature</a>
+                <a href="heatandtemp.html">Heat and Temperature</a>
+                <a href="thermometer.html">Thermometer</a>
+                <a href="thermometerreading.html">Thermometer reading</a>
+                <a href="types.html">Thermometer types</a>
+                <a href="scales.html">Scales</a>            
+              </div>
+            </div>
+            <div class="dropdown2">
+              <button class="dropbtn2">Activities
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content2">
+                <a href="converter.html">Activity 1</a>
+                <a href="diagram.html">Activity 2</a>        
+              </div>
+            </div>
+            <a href="tempquiz.html">Quiz</a>
+          </div>
+        <img src="balaswechalogo.png" id="logo">
+        <h1>THERMOMETER READING</h1>
+        <p id="p1"> To find the temperature of an object,the bulb of the thermometer needs to be in close contact with that object.On heating the mercury expands and on cooling the mercury contracts.Watch the shiny line of mercury in the tube.The highest point on the scale,at which the rise of Mercury stops,shows the temperature of object. Whie reading the measurement place the thermometer paralle to your eye sight.</P>
+        <p id="p2">While measuring temperature if there two consecutive bigger marks differ by one degree and there are 10 divisions between them then one small division reads 1/10=0.1 units.</p>
+        <p id="p3"><b style="color:darkviolet"><u>Click the below image to see how mercury inside the thermometer works.</b></u></p>
+        <img src="mercuryexp.png" id="but" onclick="myfunction2()">
+        <h2 id="v" style="position:absolute;left:10%;top:800px;color:blue">Watch below video to understand how to read a thermometer.</h2>
+        <iframe width="650" height="415" src="https://www.youtube.com/embed/O-h6fi4_vQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <button name="next" id="next" value="next" onclick="myfunction()"><b>NEXT</b></button>
+        <button name="previous" id="previous" value="previous" onclick="myfunction1()"><b>PREVIOUS</b></button>
+        <script>
+          function myfunction1()
+          {
+            window.location.href="thermometer.html";
+          }
+        
+                function myfunction()
+                {
+                  window.location.href="types.html";
+                }
+             
+        function myfunction2()
+        {
+          
+          window.location.href="mercuryexp.html"
+        }
+      </script></body>
+</html>

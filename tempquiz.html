@@ -1,0 +1,333 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="tempquiz.css">
+  <style>
+  body{
+     background-color:lightskyblue;
+  }
+  
+    .questions{
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      font-size: 18px;
+      padding: 20px ;
+      border-radius: 10px;
+    }
+  .questions.hide{
+    display: none;
+  }
+    .btn{
+      margin-top: 8px;
+      color: #ffffff;
+      background-color: #008688;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      align-self: left;
+      display: inline-block;
+    }
+     .Q_No{
+      color: #008688;
+      font-size: 20px;
+      margin-bottom: 5px;
+     border-bottom: 2px solid;
+    }
+    .Question{
+      color: black;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+    
+    
+    .Result{
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      font-size: 22px;
+      font-weight: 400;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .ResultHead{
+     color: #000000;
+     border-bottom: 1px solid;
+    }
+    .Result.hide{
+      display: none;
+    }
+
+    .option{
+      background-color: #cccccc;
+      color: #000000;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      padding: 10px 15px;
+      border-bottom: 1px solid;
+      opacity: 0;
+      animation: fadeIn 0.3s ease forwards;
+      cursor:pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    @keyframes fadeIn{
+      0%{
+        opacity:0;
+      }
+      100%{
+        opacity: 1;
+      }
+    }
+     
+    .option.correct::before{
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     width:100%;
+     background-color: green;
+     z-index: -1;
+    }
+    .correct{
+      color: #ffffff;
+    }
+   
+   .option.wrong::before{
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 100%;
+     width:100%;
+     background-color: red;
+     z-index: -1;
+    }
+    .wrong{
+      color: #ffffff;
+    }
+    .already-answered{
+      pointer-events: none;
+    }
+  </style>
+</head>   
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">Topics
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="tempdef.html">Temperature</a>
+        <a href="heatandtemp.html">Heat and Temperature</a>
+        <a href="thermometer.html">Thermometer</a>
+        <a href="thermometerreading.html">Thermometer reading</a>
+        <a href="types.html">Thermometer types</a>
+        <a href="scales.html">Scales</a>            
+      </div>
+    </div>
+    <div class="dropdown2">
+      <button class="dropbtn2">Activities
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content2">
+        <a href="converter.html">Activity 1</a>
+        <a href="diagram.html">Activity 2</a>        
+      </div>
+    </div>
+    <a href="tempquiz.html">Quiz</a>
+  </div>
+  <img src="balaswechalogo.png" id="logo">
+  <h1 style="position:absolute;left:45%;top:40px">QUIZ</h1>
+  <button name="previous" id="previous" value="previous" onclick="myfunction1()"><b>PREVIOUS</b></button>
+
+  
+  <div class="questions">
+    <h3>Answer the following questions.</h3>
+    <div class="Q_No"></div>
+    <div class="Question"></div>
+    <div class="OptionBox"></div>
+    <div class="Next_btn"><input class="btn" type="button" name="" value="Next" onclick="next()"></div>
+    </div>
+    <div class="Result hide">
+      <h2 class = "ResultHead">Quiz Result</h2>
+      <p>Correct Answers : <span class = "total-correct"></span></p>
+      <p>Your total score : <span class = "total-score"></span></p>
+    </div>
+    
+  <script >
+    const quiz=[
+    {
+      q:'Which of the following is the fastest process of heat transfer? _______.',
+      options:['Radiation','conduction','Convection','None of the above'],
+      answer:0
+    },
+    {
+      q:'Convert the temperature measurement of 25°C into Fahrenheit.',
+      options:['25°F','77°F','45°F','32°F'],
+      answer:1
+    },
+    {
+      q:'Block of ice _______.',
+      options:['Cannot radiate heat','Can radiate heat','Can radiate as well as absorb heat','Can radiate but can not absorb'],
+      answer:2
+    },
+    {
+      q:'Cooking pot is coated black because _______',
+      options:['Black substances absorbs more heat','Black substances reflects more heat','Black surfaces are easier to cleaning','the material of the pot would not be damaged'],
+      answer:0
+    },
+    {
+      q:'At what tempearture are the celsius and Fahrenheit equal? _______.',
+      options:['+40','0','+100','-40'],
+      answer:3
+    },
+     {
+      q:'The units of celsius and fahrenheit are called _______.',
+      options:['temperature','Degrees','both','None'],
+      answer:1
+    },
+     {
+      q:' _______ are used to measure temperature of human body in hospitals',
+      options:['Clinical thermometers','Laboratory thermometers'],
+      answer:0
+    },
+    {
+      q:'_______ is used in thermometer to measure temperature.',
+      options:['Copper','Lead','Mercury','Aluminium'],
+      answer:2
+    },
+    {
+      q:'What is the range of Fahrenheit scale.',
+      options:['32°-212°','0°-100°','32°-100°','100°-180°'],
+      answer:0
+    },
+    {
+      q:'The SI unit of temperature is_______',
+      options:['K','C','F'],
+      answer:0
+    },
+    ]
+    const questionNumber=document.querySelector(".Q_No");
+    const questionText=document.querySelector(".Question");
+    const questionoption=document.querySelector(".OptionBox");
+    const quizBox=document.querySelector(".questions");
+    const resultBox=document.querySelector(".Result");
+ 
+    let questionCounter=0;
+    let currentQuestion;
+    let availableQuestions= [];
+    let availableOptions= [];
+    let correctAnswers = 0;
+
+// set question number,question & options
+    function setAvailableQuestions(){
+      const totalques= quiz.length;
+      for (let i = 0; i < totalques; i++) {
+        availableQuestions.push(quiz[i])
+      }
+    }
+
+  function getNewQuestion(){
+  questionNumber.innerHTML="Q.No " + (questionCounter + 1) + " of 10" ;
+
+ //get random question 
+    const questionIndex = availableQuestions[Math.floor(Math.random()*availableQuestions.length)];
+ currentQuestion = questionIndex;
+ questionText.innerHTML = currentQuestion.q;
+const index1 = availableQuestions.indexOf(questionIndex);
+availableQuestions.splice(index1,1);   // To remove the questions which are already given.
+
+ const optionLen= currentQuestion.options.length;
+ for (let i = 0; i < optionLen; i++) {
+   availableOptions.push(i)
+ }
+
+questionoption.innerHTML = '';
+ for (let i = 0; i < optionLen; i++) {
+const optionIndex = availableOptions[Math.floor(Math.random()*availableOptions.length)];
+ const index2 = availableOptions.indexOf(optionIndex);
+availableOptions.splice(index2,1);   // To remove the options which are already given.
+ const option = document.createElement("div");
+  option.innerHTML = currentQuestion.options[optionIndex];
+  option.id= optionIndex;
+  option.className="option";
+  questionoption.appendChild(option)
+  option.setAttribute("onclick","getResult(this)");
+}
+
+questionCounter++
+}
+
+function getResult(element){
+const id = parseInt(element.id);
+if (id == currentQuestion.answer) {
+  element.classList.add("correct");
+correctAnswers++;
+
+}
+else{
+  element.classList.add("wrong");
+
+  const optionLen = questionoption.children.length;
+  for (let i = 0; i < optionLen; i++) {
+    if(parseInt(questionoption.children[i].id) == currentQuestion.answer){
+      questionoption.children[i].classList.add("correct");
+    }
+  }
+}
+ unclickableOptions();
+}
+
+function unclickableOptions(){
+  const optionLen = questionoption.children.length;
+  for (let i = 0; i < optionLen; i++) {
+    questionoption.children[i].classList.add("already-answered");
+  }
+}
+
+
+function next(){
+if (questionCounter == 10) {
+console.log("quiz over");
+quizOver();
+
+} else {
+  getNewQuestion();
+}
+}
+
+//program
+function quizOver(){
+  quizBox.classList.add("hide");
+resultBox.classList.remove("hide");
+quizResult();
+}
+
+function quizResult(){
+  resultBox.querySelector(".total-correct").innerHTML=correctAnswers;
+  resultBox.querySelector(".total-score").innerHTML=correctAnswers + "/" + "10";
+}
+    window.onload = function(){
+      setAvailableQuestions();
+      getNewQuestion();
+      }
+
+
+
+      function myfunction1()
+  {
+    window.location.href="diagram.html";
+  }
+ 
+    </script>
+  
+
+</body>
+</html>

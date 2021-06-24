@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="thermometer.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Topics</button>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="tempdef.html">Temperature</a>
+                <a href="heatandtemp.html">Heat and Temperature</a>
+                <a href="thermometer.html">Thermometer</a>
+                <a href="thermometerreading.html">Thermometer reading</a>
+                <a href="types.html">Thermometer types</a>
+                <a href="scales.html">Scales</a>            
+              </div>
+            </div>
+            <div class="dropdown2">
+              <button class="dropbtn2">Activities
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content2">
+                <a href="converter.html">Activity 1</a>
+                <a href="diagram.html">Activity 2</a>        
+            </div>
+            </div>
+            <a href="tempquiz.html">Quiz</a>
+          </div>
+        <img src="balaswechalogo.png" id="logo">
+        <h1 >THERMOMETER</h1>
+        <p id="p1">Themometer is used to measure the temperature of an object.Galileo invented a rudimentary water thermometer in 1593.He called this device a thermoscope.However,this form was effective as water freezed at low temperatures.In 1714,Gabriel Fahrenheit invented the modern mercury thermometer.
+            A thermometer consists of a long,narrow,uniform glass tube called the stem.The scales in which the temperature is measured are marked on the stem.At the end of the stem, there is a small bulb which contains mercury in it.A capillary tube is inside the glass stem in ehich mercury expands when the  bulb is kept contact with a hot body.
+        </p>
+         <h2>
+            Why mercury is used inside thermometer?     
+         </h2>
+         <p id="p2">  Mercury is the only one in liquid state at room temperature.It’s used in thermometers because it has high coefficient of expansion.
+            Hence,the slighest change in temperature is notable when it’s used in a thermometer.It also has a high boiling point which makes it very suitable to measure higher temperatures.Also,it has a shiny appearance and doesn’t stick to the surface of glass.</p>
+        <h2 id="h2">Problems with using mercury thermometers</h2>
+        <ul id="ul"><li>It cannot measure very low temperature because its freezing oint is high.</li>
+            <li>Its price is high.</li>
+            <li>Display is harder to read.</li>
+            <li>slow response.</li>
+            <li>Mercury is poisonous.</li>
+        </ul>                                          
+        <p id="p3">Mercury is toxic,and it is very difficult to dispose it when the thermometer breaks.So,nowadays digital thermometers are used to measure the thermometers ,as they do not contain mercury.</p>
+      <h2 id="struc">STRUCTURE OF THERMOMETER</h2>  
+      <img src="thermometerparts.jpeg" id="image">
+      <button name="next" id="next" value="next" onclick="myfunction()"><b>NEXT</b></button>
+      <button name="previous" id="previous" value="previous" onclick="myfunction1()"><b>PREVIOUS</b></button>
+      <script>
+        function myfunction1()
+        {
+          window.location.href="heatandtemp.html";
+        }
+     
+                function myfunction()
+                {
+                  window.location.href="thermometerreading.html";
+                }
+              </script>
+      </body>
+</html>

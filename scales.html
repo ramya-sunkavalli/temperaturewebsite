@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="scales.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Topics</button>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="tempdef.html">Temperature</a>
+                <a href="heatandtemp.html">Heat and Temperature</a>
+                <a href="thermometer.html">Thermometer</a>
+                <a href="thermometerreading.html">Thermometer reading</a>
+                <a href="types.html">Thermometer types</a>
+                <a href="scales.html">Scales</a>            
+              </div>
+            </div>
+            <div class="dropdown2">
+                <button class="dropbtn2">Activities
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content2">
+                  <a href="converter.html">Activity 1</a>
+                  <a href="diagram.html">Activity 2</a>
+                          
+                </div>
+            </div>
+            <a href="tempquiz.html">Quiz</a>
+          </div>
+        <img src="balaswechalogo.png" id="logo">
+        <h1>SCALES OF TEMPERATURE MEASUREMENT</h1>
+        <h2 id="diff">Key Differences (Celsius Scale vs Fahrenheit Scale)
+        </h2>
+        <table id="tab" style="border: solid 2px;width:60%">
+            <tr>
+                <th>Basis for comparision</th>
+                <th>Celsius</th>
+                <th>Fahreheit</th>
+            </tr>
+            <tr>
+                <th>Definition</th>
+                <td>Celsius scale, or centigrade scale, is a temperature scale that is based on the freezing point of water at 0°C and the boiling point of water at 100°C.</td>
+                <td>Fahrenheit scale is a temperature scale that is based on the freezing point of water at 32°F and the boiling point of water at 212°F.</td>
+            </tr>
+            <tr>
+                <th>Denoted by</td>
+                <td>Celsius scale or simply Celsius is abbreviated as Degree C (°C).</td>
+                <td>Fahrenheit is abbreviated as Degree F (°F).</td>
+            </tr>
+            <tr>
+                <th>The freezing point of water</td>
+                <td>The freezing point of water or the melting point of ice in the Celsius scale is 0°C. It is the lower fixed point of the scale.</td>
+                <td>The freezing point of water or the melting point of ice in the Fahrenheit scale is 32°F. It is the lower fixed point of the scale.</td>
+            </tr>
+            <tr>
+                <th>The boiling point of water</td>
+                <td>The boiling point of water, as described in the Celsius scale, is 100°C. It is the upper fixed point of the scale.</td>
+                <td>In the Fahrenheit scale, the boiling point of water is 212°F. It is the upper fixed point of the scale.</td>
+            </tr>
+            <tr>
+                <th>Average human body temperature</td>
+                <td>The average human body temperature, as measured in the Celsius scale, is 37°C.</td>
+                <td>The average human body temperature in Fahrenheit scale is 98.6°F.</td>
+            </tr>
+            <tr>
+            <th>Divisions</td>
+            <td>The melting and boiling point of water in the Celsius scale is divided into 100 equal divisions, each division representing 1°C.</td>
+            <td>The melting and boiling point of water in Fahrenheit scale is divided into 180 equal intervals, each division denoting 1°F.</td>  
+                </tr>
+            <tr>
+                <th>Conversion</td>
+                <td>It can be converted into Fahrenheit by the formula;
+                    °F = (9/5 × °C) + 32</td>
+                <td>Degree Fahrenheit is easily convertible into Celsius by the formula;
+                    °C = (°F – 32) × 5/9</td>
+            </tr>
+        </table>
+        <img src="scalesimage.jpg" id="image">
+        <button name="previous" id="previous" value="previous" onclick="myfunction1()"><b>PREVIOUS</b></button>
+        <button name="next" id="next" value="next" onclick="myfunction()"><b>NEXT</b></button>
+        <script>
+          function myfunction()
+          {
+            window.location.href="converter.html";
+          }
+        
+  function myfunction1()
+  {
+    window.location.href="types.html";
+  }
+</script>
+    </body>
+</html>

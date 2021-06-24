@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="types.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Topics</button>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="tempdef.html">Temperature</a>
+                <a href="heatandtemp.html">Heat and Temperature</a>
+                <a href="thermometer.html">Thermometer</a>
+                <a href="thermometerreading.html">Thermometer reading</a>
+                <a href="types.html">Thermometer types</a>
+                <a href="scales.html">Scales</a>            
+              </div>
+            </div>
+            <div class="dropdown2">
+              <button class="dropbtn2">Activities
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content2">
+                <a href="converter.html">Activity 1</a>
+                <a href="diagram.html">Activity 2</a>       
+              </div>
+            </div>
+            <a href="tempquiz.html">Quiz</a>
+          </div>
+        
+        <img src="balaswechalogo.png" id="logo">
+        <h1>
+            TYPES OF THERMOMETER
+        </h1>
+        <p id="p1">There are different types of thermometers for measuring the temperatures of different things like air,our bodies,food and many other things.There are clinical thermometers,Galileo thermometers,maximun-minimum thermometers and digital remote thermometers.Among these,the commonly used thermometers are clinical termometers and laboratory thermometers.</p>
+        <h2 id="clini">Clinical Thermometer</h2>
+        <p id="p2"> Doctors use a thermometer to measure temperature of our bodies.This thermometer is called the Clinical Thermometer.There are two types of scales marked on the thermometer one starts with 35degrees and ends at 45 degrees is Celsius scale.While the other that strats with 94 degrees and ends at 108 degrees in the Fahreheit scale.</p>
+        <h2 id="sub">How to use a clinical thermometer?</h2>
+        <p id ="p3">Wash the thermometer and hold it firmly by the end and give it a few jerks.These jerks will bring level of Mercury down.Ensure it falls under 35C.Now place thermometer under your tongue or armpit.After one minute take the thermometer and note the reading.The normal temperature of human body is 37C.</p>
+        <img src="clinical.jpg" id="clinicalimg">
+        <h2 id="dig">Digital Thermometer</h2>
+        <p id="p4">Digital thermometers are used to repalce clinical thermometers as mercury used in clinical thermometer is toxic.They give the direct temperature value.</p>
+        <img src="digital.jpg" id="digimg">
+        <h2 id="lab">Laboratory Thermometer</h2>
+        <p id="p5">To measure temperature of other objects like in laboratories this thermometer is used. </p>
+        <img src="laboratory.jpg" id="labimg">
+        <button name="next" id="next" value="next" onclick="myfunction()"><b>NEXT</b></button>
+        <button name="previous" id="previous" value="previous" onclick="myfunction1()"><b>PREVIOUS</b></button>
+        <script>
+          function myfunction1()
+          {
+            window.location.href="thermometerreading.html";
+          }
+        
+                function myfunction()
+                {
+                  window.location.href="scales.html";
+                }
+              </script>
+    </body>
+</html>

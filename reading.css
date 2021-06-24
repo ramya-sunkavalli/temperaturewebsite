@@ -1,0 +1,204 @@
+.navbar {
+    overflow: hidden;
+    background-color:#F7941E;
+    font-family: Arial;
+    
+  }
+  
+  /* Links inside the navbar */
+  .navbar a {
+    float: left;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown,.dropdown2 {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn,.dropdown2 .dropbtn2 {
+    font-size: 24px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn, .dropdown2:hover .dropbtn2 {
+    background-color:green;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content,.dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a ,.dropdown-content2 a {
+    float: none;
+    color:black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover,.dropdown-content2 a:hover {
+    background-color:steelblue;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content,.dropdown2:hover .dropdown-content2 {
+    display: block;
+  }
+#logo {
+    position: absolute;
+    width: 194px;
+    height: 60px;
+    left: 1225px;
+    top: 65px;
+}
+h1
+{
+    position: absolute;
+width: 669px;
+height: 39px;
+left: 368px;
+top: 50px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 39px;
+/* identical to box height */
+
+text-align: center;
+
+color: #1C75BC;
+
+}
+#p2{
+    position: absolute;
+width: 1132px;
+height: 92px;
+left: 98px;
+top: 245px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 29px;
+text-align: center;
+color:black;
+}
+h2{
+    position: absolute;
+width: 1251px;
+height: 203px;
+left: 70px;
+top: 380px;
+color:red;
+}
+#parts
+{
+    position: absolute;
+width: 591px;
+height: 493px;
+left: 450px;
+top: 380px;
+}
+#p1
+{
+    position: absolute;
+width: 1332px;
+height: 139px;
+left: 74px;
+top: 127px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+
+}
+#p3
+{
+    position: absolute;
+width: 866px;
+height: 62px;
+left: 80px;
+top: 405px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+}
+#but
+{
+  position:absolute;
+  width:300px;
+  height:300px;
+  top:500px;
+  left:35%;
+}
+#next{
+  position: absolute;
+width: 131px;
+height: 56px;
+left: 1193px;
+top: 1423px;
+background-color: #1C75BC;
+transition:transform .2s;
+border-radius: 15%;
+}
+#next:hover{
+  transform:scale(1.5);
+
+
+}
+#previous{
+  position: absolute;
+width: 131px;
+height: 56px;
+left: 140px;
+top: 1423px;
+background-color: #1C75BC;
+transition:transform .2s;
+border-radius: 15%;
+}
+#previous:hover{
+  transform:scale(1.5);
+
+
+}
+iframe
+{
+  position:absolute;
+  top:900px;
+  left:20%;
+}

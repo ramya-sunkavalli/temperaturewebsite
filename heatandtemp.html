@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="heatandtemp.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <div class="dropdown">
+              <button class="dropbtn">Topics
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="tempdef.html">Temperature</a>
+                <a href="heatandtemp.html">Heat and Temperature</a>
+                <a href="thermometer.html">Thermometer</a>
+                <a href="thermometerreading.html">Thermometer reading</a>
+                <a href="types.html">Thermometer types</a>
+                <a href="scales.html">Scales</a>            
+              </div>
+            </div>
+            <div class="dropdown2">
+              <button class="dropbtn2">Activities
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content2">
+                <a href="converter.html">Activity 1</a>
+                <a href="diagram.html">Activity 2</a>       
+              </div>
+            </div>
+            <a href="tempquiz.html">Quiz</a>
+          </div>
+          <h1>HEAT AND TEMPERATURE</h1>
+          <img src="balaswechalogo.png" id="logo">
+          <p id="p1">Heat is a form of energy and is measured in Joules(J).
+            Heat can move from one place to another.Temperature is different from heat.Temperature is measured in degrees Celsius.Movement of particles/molecules produces heat.Particles move about more and take up more room if heated-that is why things expand if heated.
+              
+            If you stand close to fire,you feel warm.When a warm object is placed close to a cooler object,heat energy moves from warmer objects to the cooler objects until both objects attain the same temperature.Often we think that heat and temperature are same things;this is wrong.Temperature is measure of heat energy in a body and which indicates the ability of a body to give heat to another body or absorb heat from another body.We use thermometers to measure temperatures.</p>
+          <h2>Lets do an experiment..</h2>  
+          <p id="p2">Take some coldwater,luke-warm water and hot water in three different vessels.Immerse your left hand in the cold water vessel and right hand in the hot water vessel simultaneously.Wait for two to three mintutes.Take off both hands and dip in luke-warm water vessel.</p> 
+          <img src="heatandtemp.jpeg" id="image">
+          <p id="p3">What do you feel about hotness of water now?Do both of your hands feel the same hotness?Though both hands are in  the same glass of water,one hand we feel it’s cd and the other feel it hot!Look how our hands are confused!
+            Can we exactly decide the hotnesss/coldness of a substance just by touching it? Why? It is not possible to guess the hotness of a substance only on basis of feel/touch.It is certain that water in different tubs has different degrees of hotness which cannot be exactly determined simply by touching.
+            
+            It’s obvious that we need some method to measure the temperature.So we a device called Thermoometer to measure temperaure.</p> 
+            
+            <button name="next" id="next" value="next" onclick="myfunction()"><b>NEXT</b></button>
+            <button name="previous" id="previous" value="previous" onclick="myfunction1()"><b>PREVIOUS</b></button>
+            <script>
+              function myfunction()
+              {
+                window.location.href="thermometer.html";
+              }
+              function myfunction1()
+              {
+                window.location.href="tempdef.html";
+              }
+            </script>
+        </body>
+</html>
